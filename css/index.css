@@ -1,0 +1,13 @@
+#main{
+    margin: 100px;
+
+}
+body{
+    height: 100vw;
+    overflow: hidden;
+}
+input[type='button']{
+    width: 100px;
+    height: 40px;
+    
+}
