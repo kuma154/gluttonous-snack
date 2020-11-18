@@ -10,6 +10,8 @@ const pause = document.getElementById('pause');
 const main = document.getElementById('main');
 const scoreText = document.getElementById('score');
 const checkpoint = document.getElementById('checkpoint');
+const accelerate = document.getElementById("accelerate");
+const Slowdown = document.getElementById("Slowdown");
 
 /**
  * 
@@ -209,7 +211,7 @@ function restart(map,snake){
 }
 
 // 创建画布
-var map = new Map(20,40,20);
+var map = new Map(20,30,20);
 map.createMap();
 // 创建食物
 var food = new Food(map);
@@ -255,4 +257,21 @@ begin.addEventListener('click',function(){
 
 pause.addEventListener('click',function(){
     clearInterval(timer)
+})
+
+accelerate.addEventListener('click',function(){
+
+    speed-=30;    clearInterval(timer)
+   
+    timer = setInterval(()=>{
+        snake.run();
+     },speed)
+})
+Slowdown.addEventListener('click',function(){
+
+    speed+=30;    clearInterval(timer)
+
+    timer = setInterval(()=>{
+        snake.run();
+     },speed)
 })
