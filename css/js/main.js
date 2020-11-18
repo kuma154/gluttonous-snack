@@ -249,7 +249,7 @@ function restart(map, snake) {
 }
 
 // 创建画布
-var map = new Map(20, 29, 20);
+var map = new Map(20, 10, 10);
 map.createMap();
 // 创建食物
 var food = new Food(map);
